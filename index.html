@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="/jquery/jquery.js"></script>
+	<script src="/jquery/jQueryUI.js"></script>
+	<title>EasyDVD</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<script src="main.js"></script>
+	
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body id="body1">
+
+	<nav class=" navbar navbar-custom navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://jadran.sdsu.edu/~jadrn032/proj1/index.html" class="navbar-brand"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span> EasyDVD</a>
+        </div>
+
+</div>
+</nav>
+
+<br>
+<hr>
+<br>
+
+<div id="centerpage">
+
+   <form method="POST" action="/perl/jadrn032/session_cookies/login.cgi">
+    	<table>
+		<tr>
+			<td><b>Username:</b></td>
+			<td><input type="text" class="inputs" name="user" id='user' size="15"></td>
+			<br>
+		</tr>
+		
+		<tr>
+			<td><b>Password:</b></td>
+			<td><input type="password" class="inputs" name="password" size="15"></td>
+		</tr>
+		</table>
+		
+		<div><input type="reset" class="button"></td>
+		<input type="submit" value="Login" class="button"></td>
+	    </div>
+		
+    </form>
+</div>
+
+<h3 id="error"></h3>
+</body>
+</html>

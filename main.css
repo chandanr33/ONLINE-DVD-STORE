@@ -1,0 +1,215 @@
+/*	RAJU, CHANDAN
+   JADRAN 032
+   PROJECT 1
+   SPRING 2018*/ 
+#body1{
+	background:url(https://www.rksystems.co.za/wp-content/uploads/2016/09/rk-security-sytems-background-1.jpg)no-repeat fixed center;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+#body2{
+	background:url(https://www.rksystems.co.za/wp-content/uploads/2016/09/rk-security-sytems-background-1.jpg)no-repeat fixed center;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+#body3{
+	background:url(https://www.rksystems.co.za/wp-content/uploads/2016/09/rk-security-sytems-background-1.jpg)no-repeat fixed center;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+#h2{
+	color: white;
+}
+.navbar-custom {
+	background-color: #A00000;
+}
+
+#centerpage {
+    max-width: 300px;
+    margin: auto;
+    color: white;
+    padding-top: 9%;
+}
+
+td {
+	padding: 10px;
+	font-size: 17px;
+}
+
+.button {
+	padding: 7px;
+	border-radius: 9px;
+	border: 3px solid black;
+	width: 100px;
+	margin: 10px;
+	margin-top: 10px;
+	background-color: #A00000;
+	color: white;
+	font-weight: bold;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+#error {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.contacthead {
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+.inputs {
+	margin: 15px;
+	color: #A00000;
+}
+
+a {
+	transform-style: none;
+}
+#logout{
+	margin-left: 73%;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 0px 3px 0px 3px;
+}
+.navbar-brand {
+color: white !important;
+
+}
+
+html,body { margin: 0; }
+
+h2 { 
+	text-align: center;
+ }
+
+div#tabs-1 {
+    height: 100%;
+    background: #DCDCDC;
+    border: 1px solid #009;
+    padding: 5px;
+}
+div#tabs-2 {
+    height: 100%;
+    background: #ffffcc;
+    border: 1px solid #009;    
+    padding: 5px;
+}
+div#tabs-3 {
+    height: 100%;
+    background: #ffcccc;
+    border: 1px solid #009;    
+    padding: 5px;
+}
+
+.ui-tabs-hide {
+    display: none;
+}
+
+div#tabs {
+    margin: 0 300px 0 300px;
+    height: auto;
+    min-width:500px;
+    opacity: 0.7;
+    }
+    
+div#tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 22px;
+    border-bottom: 1px solid #000;
+}
+div#tabs ul li {
+    float: left;
+    height: 17px;
+    padding: 4px 10px 0 10px;
+    margin-right: 5px;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    position: relative;
+    background: #AAA;
+    font-weight: bold;
+}
+div#tabs ul li a {
+    text-decoration: none;
+    color: black;
+}
+div#tabs ul li.ui-tabs-selected {
+    background: #CCC;
+}
+div#tabs ul li.ui-tabs-selected a {
+    color: white;
+}
+label{
+	font-weight: bold;
+}
+.error{
+	color: red;
+	text-align: center;
+}
+#addform{
+	padding-left: 125px;
+}
+#editform{
+	padding-left: 125px;
+}
+#delform{
+	padding-left: 125px;
+}
+.buttons_add{
+	padding: 6px;
+	border-radius: 9px;
+	border: 2px solid black;
+	width: 100px;
+	background-color: #DCDCDC;
+	color: black;
+	font-weight: bold;
+}
+
+#errormsg {
+    color: red !important;
+	padding-left: 133px;
+}
+#errormsg_edit {
+    color: red !important;
+	padding-left: 133px;
+}
+#errormsg_del {
+    color: red !important;
+	padding-left: 133px;
+}
+.addbutt{
+	margin-left: 20%;
+}
+#status{
+	color: red !important;
+	padding-left: 133px;
+}
+#status_edit{
+	color: red !important;
+	padding-left: 133px;
+}
+#status_del{
+	color: red !important;
+	padding-left: 133px;
+}
+.out{
+	color: white;
+}

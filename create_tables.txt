@@ -1,0 +1,49 @@
+use jadrn032;
+
+drop table if exists product;
+drop table if exists vendor;
+drop table if exists category;
+
+create table vendor(
+    id  int NOT NULL AUTO_INCREMENT,
+    name    varchar(20) NOT NULL,
+    primary key(id));
+
+create table category(
+    id  int NOT NULL AUTO_INCREMENT,
+    name    varchar(20) NOT NULL,
+    primary key(id));
+
+create table product (
+    sku     char(7)     NOT NULL,
+    catID   int,
+    venID   int,
+    mid             varchar(50),
+    description     varchar(1024),
+    features        varchar(512),
+    cost            decimal(10,2),
+    retail          decimal(10,2),
+    quantity	    int,
+    image           char(12),
+    primary key(sku),
+    foreign key(catID) references category(id),
+    foreign key(venID) references vendor(id));
+## Insert fixed data
+
+INSERT INTO category (name)  VALUES('Action');
+INSERT INTO category (name)  VALUES('Adventure');
+INSERT INTO category (name)  VALUES('Animated');
+INSERT INTO category (name)  VALUES('Comedy');
+INSERT INTO category (name)  VALUES('Horror');
+INSERT INTO category (name)  VALUES('Thriller');
+
+INSERT INTO vendor (name)  VALUES('MGM');	
+INSERT INTO vendor (name)  VALUES('Paramount'); 
+INSERT INTO vendor (name)  VALUES('Sony');
+INSERT INTO vendor (name)  VALUES('Universal'); 
+INSERT INTO vendor (name)  VALUES('Warner Bros'); 
+
+
+INSERT INTO product VALUES('ADV-111','2','4','AD-1','Jurassic Park (1993)','During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.','10','12.50', '10','picture');
+INSERT INTO product VALUES('ACT-111','1','4','AC-1','Fast Five (2011)','Dominic Toretto and his crew of street racers plan a massive heist to buy their freedom while in the sights of a powerful Brazilian drug lord and a dangerous federal agent.','10','12.50', '5','picture');
+

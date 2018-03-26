@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<!-- RAJU, CHANDAN
+   JADRAN 032
+   PROJECT 1
+   SPRING 2018 -->
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, no-store, must-revalidate" />
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+  <META HTTP-EQUIV="Expires" CONTENT="0" />
+
+  <script src="/jquery/jquery.js"></script>
+    <script src="/jquery/jQueryUI.js"></script>
+    
+    <title>EasyDVD</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="ajax_get_lib.js"></script>   
+    <script src="main.js"></script>
+</head>
+<body id="body2">
+              <h2 id="h2">EasyDVD</h2>
+                <h3><a id="logout" href="/perl/jadrn032/session_cookies/logout.cgi">Logout</a></h3>
+    <div id="tabs">      
+      <ul>
+        <li class="tabcenter"><a href="#tabs-1"><span>New Record</span></a></li>
+        <li><a href="#tabs-2"><span>Edit Record</span></a></li>
+        <li><a href="#tabs-3"><span>Delete Record</span></a></li>       
+      </ul>
+      <div id="tabs-1">
+        <form method="post" enctype="multipart/form-data" name="addform" id="addform" action="">
+        <div >
+        <div >
+        <br>
+        <div >          
+            <div >
+                <div >
+                    <div >
+                        <label>SKU:</label>
+                        <input type="text" name="sku" id="sku" maxlength="7" placeholder= "ABC-123" size="7">
+                        <h4 id="status"></h4>
+                    </div>                    
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Category:</label>
+                        <select  name="category" id="category">
+                            <option value="0">---Choose Category---</option>
+                            <option value="1">Action</option>
+                            <option value="2">Adventure</option>
+                            <option value="3">Animation</option>
+                            <option value="4">Comedy</option>
+                            <option value="5">Horror</option>
+                            <option value="6">Thriller</option>                            
+                      </select>
+                       <label> Vendor:</label>
+                        <select  name="vendor" id="vendor">
+                            <option value="0">---Choose Vendor---</option>
+                            <option value="1">MGM</option>
+                            <option value="2">Paramount</option>
+                            <option value="3">Sony</option>
+                            <option value="4">Universal</option>
+                            <option value="5">Warner Bros</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Manufacturer's Identifier:</label>
+                        <input type="text" name="mid" id="mid" size="10" >
+                    </div>
+                  </div>
+                <br>                 
+                <div >
+                    <div >
+                        <textarea placeholder="Description" rows="5" cols="30"  name="description" id="description"></textarea>
+                        <textarea placeholder="Features" rows="5" cols="30"  name="features" id="features"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                       <label> Cost:</label>
+                        <input type="text" name="cost" size="10" id="cost">
+                       <label> Retail:</label>
+                        <input type="text"  name="retail" size="10" id="retail">
+                       <label> Quantity:</label>
+                        <input type="number"  name="qty" size="10" id="qty" min="1">
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Product Image:</label>
+                        <input type="file"  name="product_image" id="product_image">
+                    </div>
+                </div>    
+                <h4><div id="errormsg" name="errormsg"> </div>&nbsp;</h4>                 
+                </div>
+                <div >
+                    <div class="addbutt">
+                        <button type="reset" class="button" name="clear" id="clear">Clear</button>
+                        <button class="button" name="additem" id="additem">Add</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <h2 id="answer"></h2>
+      </div>    
+      <div id="tabs-2">
+<form method="post" enctype="multipart/form-data" name="editform" id="editform" action="">
+        <div >
+        <div >
+        <br>
+        <div >          
+            <div >
+                <div >
+                    <div >
+                        <label>SKU:</label>
+                        <input type="text" name="sku_edit" id="sku_edit" maxlength="7" placeholder= "ABC-123" size="7">
+                        <h4 id="status_edit"></h4>
+                    </div>                    
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Category:</label>
+                        <select  name="category_edit" id="category_edit">
+                            <option value="0">---Choose Category---</option>
+                            <option value="1">Action</option>
+                            <option value="2">Adventure</option>
+                            <option value="3">Animation</option>
+                            <option value="4">Comedy</option>
+                            <option value="5">Horror</option>
+                            <option value="6">Thriller</option>                            
+                        </select>
+                       <label> Vendor:</label>
+                        <select  name="vendor_edit" id="vendor_edit">
+                            <option value="0">---Choose Vendor---</option>
+                            <option value="1">MGM</option>
+                            <option value="2">Paramount</option>
+                            <option value="3">Sony</option>
+                            <option value="4">Universal</option>
+                            <option value="5">Warner Bros</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Manufacturer's Identifier:</label>
+                        <input type="text" name="mid_edit" id="mid_edit" size="10" >
+                    </div>
+                  </div>
+                <br>                  
+                <div >
+                    <div >
+                        <textarea placeholder="Description" rows="5" cols="30"  name="description_edit" id="description_edit"></textarea>
+                        <textarea placeholder="Features" rows="5" cols="30"  name="features_edit" id="features_edit"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                       <label> Cost:</label>
+                        <input type="text" name="cost_edit" size="10" id="cost_edit">
+                       <label> Retail:</label>
+                        <input type="text"  name="retail_edit" size="10" id="retail_edit">
+                       <label> Quantity:</label>
+                        <input type="number"  name="qty_edit" size="10" id="qty_edit" min="1">
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Product Image:</label>
+                        <input type="file" accept="image/*"  name="product_image_edit" id="product_image_edit">
+                    </div>
+                </div>    
+                <h4><div id="errormsg_edit" name="errormsg_edit"> </div>&nbsp;</h4>                 
+                </div>
+                <div >
+                    <div class="addbutt">
+                        <button type="reset" class="button" name="clear" id="clear">Clear</button>
+                        <button class="button" name="edititem" id="edititem">Edit</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </form>
+      </div>
+      <div id="tabs-3">
+<form method="post" enctype="multipart/form-data" name="delform" id="delform" action="">
+        <div >
+        <div >
+        <br>
+        <div >          
+            <div >
+                <div >
+                    <div >
+                        <label>SKU:</label>
+                        <input type="text" name="sku_del" id="sku_del" maxlength="7" placeholder= "ABC-123" size="7">
+                        <h4 id="status_del"></h4>
+                    </div>                    
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Category:</label>
+                        <select  name="category_del" id="category_del">
+                            <option value="0">---Choose Category---</option>
+                            <option value="1">Action</option>
+                            <option value="2">Adventure</option>
+                            <option value="3">Animation</option>
+                            <option value="4">Comedy</option>
+                            <option value="5">Horror</option>
+                            <option value="6">Thriller</option>                            
+                        </select>
+                       <label> Vendor:</label>
+                        <select  name="vendor_del" id="vendor_del">
+                            <option value="0">---Choose Vendor---</option>
+                            <option value="1">MGM</option>
+                            <option value="2">Paramount</option>
+                            <option value="3">Sony</option>
+                            <option value="4">Universal</option>
+                            <option value="5">Warner Bros</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Manufacturer's Identifier:</label>
+                        <input type="text" name="mid_del" id="mid_del" size="10" >
+               </div> <br>                 
+                <div >
+                    <div >
+                        <textarea placeholder="Description" rows="5" cols="30"  name="description_del" id="description_del"></textarea>
+                        <textarea placeholder="Features" rows="5" cols="30"  name="features_del" id="features_del"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                       <label> Cost:</label>
+                        <input type="text" name="cost_del" size="10" id="cost_del">
+                       <label> Retail:</label>
+                        <input type="text"  name="retail_del" size="10" id="retail_del">
+                       <label> Quantity:</label>
+                        <input type="number"  name="qty_del" size="10" id="qty_del" min="1">
+                    </div>
+                </div>
+                <br>
+                <div >
+                    <div >
+                        <label>Product Image:</label>
+                        <input type="file"  name="product_image_del" id="product_image_del">
+                    </div>
+                </div>    
+                <h4><div id="errormsg_del" name="errormsg_del"> </div>&nbsp;</h4>                 
+                </div>
+                <div >
+                    <div class="addbutt">
+                        <button type="reset" class="button" name="clear" id="clear">Clear</button>
+                        <button class="button" name="delitem" id="delitem">Delete</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>       
+        </form>
+      </div>
+    </div>
+</body>
+</html>
